@@ -1,4 +1,4 @@
-import { useTheme, Text, Spacer, Link } from "@nextui-org/react";
+import { useTheme, Text, Spacer, Link, Container } from "@nextui-org/react";
 import Image from "next/image";
 import NextLink from "next/link";
 
@@ -23,20 +23,25 @@ export const Navbar = (): JSX.Element => {
         height={70}
       />
       <NextLink href="/" passHref>
-        <Link>
+        <Container
+          display="flex"
+          direction="row"
+          justify="center"
+          alignItems="flex-start"
+        >
           <Text color="white" h2>
             P
           </Text>
           <Text color="white" h3>
             okémon
           </Text>
-        </Link>
+        </Container>
       </NextLink>
       <Spacer css={{ flex: 1 }}></Spacer>
       <NextLink href="/favorites" passHref>
-        <Link>
-          <Text color="white">Favoritos</Text>
-        </Link>
+        {/* <Link> */}
+        <Text color="white">Favoritos</Text>
+        {/* </Link> */}
       </NextLink>
     </div>
   );

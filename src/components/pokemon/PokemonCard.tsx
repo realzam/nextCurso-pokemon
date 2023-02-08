@@ -12,7 +12,7 @@ export const PokemonCard: FC<Props> = ({ pokemon }): JSX.Element => {
   const router = useRouter();
 
   const onClick = () => {
-    router.push(`/pokemon/${id}`);
+    router.push(`/name/${name}`);
   };
 
   return (
